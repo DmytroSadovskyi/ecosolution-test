@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Oswald:wght@300;400&display=swap');
 
+@font-face {
+  font-family: 'allround';
+  font-weight: 500;
+  src: url('./assets/fonts/allroundgothic-thick.otf');
+}
+
 body {
   font-family: 'Oswald', sans-serif;
+  padding-top: 112px;
+  background-color: #f3f5fa;
 }
 
 h1,
@@ -26,4 +34,16 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding-top: 36px;
+}
+
+address {
+  font-style: normal;
 }

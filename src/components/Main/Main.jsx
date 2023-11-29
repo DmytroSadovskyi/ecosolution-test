@@ -1,21 +1,41 @@
 import React from 'react';
 import Container from '../Container';
+import {
+  Divider,
+  LearnMoreLink,
+  MainSection,
+  MainText,
+  MainTitle,
+  ContactInfo,
+  ImageWrapper,
+} from './Main.styled';
+import sprite from '../../assets/sprite.svg';
 
 const Main = () => {
   return (
-    <section id="main">
+    <MainSection>
       <Container>
-        <h1>RENEWABLE ENERGY For any task</h1>
-        <p>
+        <MainTitle>RENEWABLE ENERGY For any task</MainTitle>
+        <MainText>
           Development and implementation of renewable non-polluting energy sources, generating power
           generation using energy wind, sun, water, biomass
-        </p>
-        <a href="#cases">Learn more</a>
-        <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
-        <p>office@ecosolution.com</p>
-        <div></div>
+        </MainText>
+        <LearnMoreLink href="#">
+          Learn more
+          <span>
+            <svg width={16} height={16}>
+              <use href={sprite + '#icon-arrow-right'}></use>
+            </svg>
+          </span>
+        </LearnMoreLink>
+        <Divider />
+        <ContactInfo>
+          <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
+          <p>office@ecosolution.com</p>
+        </ContactInfo>
+        <ImageWrapper></ImageWrapper>
       </Container>
-    </section>
+    </MainSection>
   );
 };
 

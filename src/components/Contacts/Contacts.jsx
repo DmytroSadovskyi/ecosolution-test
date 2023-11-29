@@ -1,46 +1,54 @@
 import React from 'react';
 import Container from '../Container';
 import sprite from '../../assets/sprite.svg';
+import {
+  Title,
+  ContactsList,
+  ContactLink,
+  ContactType,
+  FirstPhone,
+  SecondPhone,
+} from './Contacts.styled';
 
 const Contacts = () => {
   return (
     <section id="contacts">
       <Container>
-        <h2>Contact us</h2>
+        <Title>Contact us</Title>
         <address>
-          <ul>
+          <ContactsList>
             <li>
-              <p>Phone:</p>
-              <a href="">
+              <ContactType>Phone:</ContactType>
+              <FirstPhone href="">
                 <svg width={24} height={24}>
                   <use href={sprite + '#icon-call'}></use>
                 </svg>
                 38 (098) 12 34 567
-              </a>
-              <a href="">
+              </FirstPhone>
+              <SecondPhone href="">
                 <svg width={24} height={24}>
                   <use href={sprite + '#icon-call'}></use>
                 </svg>
                 38 (093) 12 34 567
-              </a>
+              </SecondPhone>
             </li>
             <li>
-              <p>E-mail:</p>
-              <a href="">
+              <ContactType>E-mail:</ContactType>
+              <ContactLink href="">
                 <svg width={24} height={24}>
                   <use href={sprite + '#icon-sms'}></use>
                 </svg>
                 office@ecosolution.com
-              </a>
+              </ContactLink>
             </li>
             <li>
-              <p>Address:</p>
-              <a href="">
+              <ContactType>Address:</ContactType>
+              <ContactLink href="">
                 <svg width={24} height={24}>
                   <use href={sprite + '#icon-map'}></use>
                 </svg>
                 79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-              </a>
+              </ContactLink>
             </li>
             <li>
               <p>Social Networks:</p>
@@ -55,7 +63,7 @@ const Contacts = () => {
                 </svg>
               </a>
             </li>
-          </ul>
+          </ContactsList>
         </address>
         <form action="">
           <label htmlFor="name">* Full name:</label>
