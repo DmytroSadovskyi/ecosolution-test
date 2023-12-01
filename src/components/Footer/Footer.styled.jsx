@@ -31,6 +31,9 @@ export const FooterSocials = styled.ul`
   display: flex;
   gap: 8px;
   margin-bottom: 24px;
+  & svg {
+    stroke: #173d33;
+  }
 `;
 
 export const LinkToMain = styled(ScrollLink)`

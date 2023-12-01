@@ -73,6 +73,9 @@ export const SocialsWrapper = styled.div`
 
 export const SocialLink = styled.a`
   padding: 12px;
+  & svg {
+    stroke: #173d33;
+  }
 `;
 
 export const FormWrapper = styled.div`

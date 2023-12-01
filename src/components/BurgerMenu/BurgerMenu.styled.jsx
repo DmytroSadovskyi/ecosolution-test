@@ -14,8 +14,10 @@ export const Backdrop = styled.div`
 `;
 
 export const MenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 320px;
+  min-width: 320px;
   padding: 24px 19px;
   border-radius: 25px;
   background: rgba(23, 61, 51, 0.75);
@@ -38,6 +40,16 @@ export const CloseButton = styled.button`
   letter-spacing: -0.8px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #97d28b;
+    svg {
+      stroke: #97d28b;
+    }
+  }
 `;
 
 export const Divider = styled.div`
@@ -63,6 +75,7 @@ export const MenuLink = styled(MobileLink)`
   line-height: normal;
   letter-spacing: -0.96px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 
   & svg {
     stroke: #fff;
@@ -90,4 +103,20 @@ export const SocialsList = styled.ul`
   display: flex;
   gap: 8px;
   justify-content: flex-start;
+
+  & svg {
+    stroke: #fff;
+    fill: #fff;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  & a {
+    &:hover,
+    &:focus {
+      svg {
+        stroke: #97d28b;
+        fill: #97d28b;
+      }
+    }
+  }
 `;

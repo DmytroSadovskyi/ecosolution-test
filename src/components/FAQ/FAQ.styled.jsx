@@ -16,7 +16,6 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   padding-top: 16px;
-  padding-left: 24px;
   border-top: 1px solid #97d28b;
 
   &:not(:last-child) {
@@ -32,8 +31,11 @@ export const Item = styled.li`
 `;
 
 export const Question = styled.p`
-  position: relative;
-  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: ${props => (props.$opened ? '16px' : '0px')};
   color: #173d33;
   text-align: justify;
   font-family: 'Fira Sans', sans-serif;
@@ -42,11 +44,9 @@ export const Question = styled.p`
   line-height: normal;
   letter-spacing: -0.72px;
 
-  &::before {
-    content: '+';
-    position: absolute;
-    top: 50%;
-    left: 8px;
+  & svg {
+    width: 16px;
+    height: 16px;
   }
 `;
 

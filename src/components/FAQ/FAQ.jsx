@@ -20,7 +20,15 @@ const FAQ = () => {
         <List>
           {data.map((item, index) => (
             <Item key={index} className={openIndex === index ? 'open' : ''}>
-              <Question onClick={() => handleItemClick(index)}>{item.question}</Question>
+              <Question
+                onClick={() => handleItemClick(index)}
+                $opened={openIndex === index ? true : false}
+              >
+                <svg>
+                  <use href={sprite + (openIndex === index ? '#icon-minus' : 'icon-plus')}></use>
+                </svg>
+                {item.question}
+              </Question>
               {openIndex === index && <Answer>{item.answer}</Answer>}
             </Item>
           ))}

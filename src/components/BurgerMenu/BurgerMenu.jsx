@@ -73,10 +73,18 @@ const BurgerMenu = ({ handleToggle }) => {
           </Menu>
           <SocialsList>
             <li>
-              <a href="">Facebook</a>
+              <a href="">
+                <svg width={24} height={24}>
+                  <use href={sprite + '#icon-facebook'}></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="">Instagram</a>
+              <a href="">
+                <svg width={24} height={24}>
+                  <use href={sprite + '#icon-instagram'}></use>
+                </svg>
+              </a>
             </li>
           </SocialsList>
         </InnerWrapper>
