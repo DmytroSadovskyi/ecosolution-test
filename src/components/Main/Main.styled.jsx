@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import bg from '../../assets/images/mainBg/wind-turbine-clean-energy-mobile@1x.jpg';
-
+import { Link as ScrollLink } from 'react-scroll';
 export const MainSection = styled.section`
   padding-top: 146px;
 `;
@@ -36,7 +36,7 @@ export const MainText = styled.p`
   font-weight: 400;
 `;
 
-export const LearnMoreLink = styled.a.attrs(props => ({
+export const LearnMore = styled(ScrollLink).attrs(props => ({
   hovered: undefined,
 }))`
   display: flex;

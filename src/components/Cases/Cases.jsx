@@ -1,13 +1,12 @@
 import React from 'react';
 import Container from '../Container';
 import MySlider from '../Slider/Slider';
-import { CasesSection, Title } from './Cases.styled';
+import { CasesSection } from './Cases.styled';
 
 const Cases = () => {
   return (
-    <CasesSection>
+    <CasesSection id="cases">
       <Container>
-        <Title>Successful cases of our company</Title>
         <MySlider />
       </Container>
     </CasesSection>

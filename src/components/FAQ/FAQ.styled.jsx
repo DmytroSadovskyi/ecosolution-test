@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as ScrolledLink } from 'react-scroll';
 
 export const Title = styled.h2`
   color: #173d33;
@@ -20,6 +21,13 @@ export const Item = styled.li`
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+
+  &.open {
+    max-height: 200px;
   }
 `;
 
@@ -63,7 +71,7 @@ export const MoreQuestion = styled.p`
   letter-spacing: -0.72px;
 `;
 
-export const ContactLink = styled.a.attrs(props => ({
+export const ContactLink = styled(ScrolledLink).attrs(props => ({
   hovered: undefined,
 }))`
   width: 130px;

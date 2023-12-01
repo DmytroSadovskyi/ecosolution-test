@@ -65,3 +65,136 @@ export const FirstPhone = styled(ContactLink)`
 `;
 
 export const SecondPhone = styled(ContactLink)``;
+
+export const SocialsWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+export const SocialLink = styled.a`
+  padding: 12px;
+`;
+
+export const FormWrapper = styled.div`
+  padding: 36px 12px;
+  background-color: #eaedf1;
+`;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FormField = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &:not(:last-of-type) {
+    margin-bottom: 28px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+`;
+
+export const FormLabel = styled.label`
+  color: #173d33;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+`;
+export const FormInput = styled.input`
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid ${props => (props.$err ? ' #D28B8B' : '#97d28b')};
+  background-color: transparent;
+
+  &::placeholder {
+    color: #173d33;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+`;
+
+export const ErrorMessage = styled.span`
+  color: #d28b8b;
+  text-align: right;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 12px;
+
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+`;
+
+export const TextArea = styled.textarea`
+  border: none;
+  border-bottom: 1px solid #97d28b;
+  background-color: transparent;
+  resize: none;
+  height: 147px;
+
+  &::placeholder {
+    color: #173d33;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+  }
+`;
+
+export const FormButton = styled.button`
+  display: flex;
+  height: 39px;
+  padding: 4px 4px 4px 16px;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 500px;
+  border: 1px solid #97d28b;
+
+  background-color: #eaedf1;
+  color: #173d33;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  letter-spacing: -0.64px;
+
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:hover):not(:focus) {
+    border: 1px solid #97d28b;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #173d33;
+    color: #97d28b;
+    border: none;
+  }
+
+  & span {
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    background-color: #97d28b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & svg {
+    stroke: #173d33;
+  }
+`;

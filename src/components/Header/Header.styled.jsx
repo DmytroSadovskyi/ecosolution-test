@@ -8,7 +8,7 @@ export const PageHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: ${props => (props.scrolled === 'true' ? '#fff' : '#f3f5fa')};
+  background-color: ${props => (props.$scrolled === 'true' ? '#fff' : '#f3f5fa')};
 `;
 
 export const InnerContainer = styled.div`

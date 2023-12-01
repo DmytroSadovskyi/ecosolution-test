@@ -2,20 +2,38 @@ import React from 'react';
 import Container from '../Container';
 import sprite from '../../assets/sprite.svg';
 
+import {
+  FooterLogoWrapper,
+  TopWrapper,
+  BottomWrapper,
+  FooterSocials,
+  LinkToMain,
+} from './Footer.styled';
+import { Divider } from '../Main/Main.styled';
+
 const Footer = () => {
   return (
     <footer>
       <Container>
-        <div>
-          <svg width={269} height={40}>
-            <use href={sprite + '#icon-logo'}></use>
-          </svg>
-          <a href="#main">
-            <svg width={24} height={24}>
-              <use href={sprite + '#icon-arrow-right'}></use>
+        <Divider />
+        <TopWrapper>
+          <FooterLogoWrapper>
+            <svg width={31} height={18}>
+              <use href={sprite + '#icon-bgAsset'}></use>
             </svg>
-          </a>
-          <ul>
+            <span>ecosolution</span>
+            <svg width={60} height={18}>
+              <use href={sprite + '#icon-GREENERGY-FOR-LIFE'}></use>
+            </svg>
+          </FooterLogoWrapper>
+          <LinkToMain to="main" smooth={true}>
+            <span>
+              <svg width={16} height={16}>
+                <use href={sprite + '#icon-arrow-up'}></use>
+              </svg>
+            </span>
+          </LinkToMain>
+          <FooterSocials>
             <li>
               <a href="">
                 <svg width={24} height={24}>
@@ -30,13 +48,13 @@ const Footer = () => {
                 </svg>
               </a>
             </li>
-          </ul>
-        </div>
-        <div>
+          </FooterSocials>
+        </TopWrapper>
+        <BottomWrapper>
           <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>
           <p>office@ecosolution.com</p>
           <p>ecosolution © 2023</p>
-        </div>
+        </BottomWrapper>
       </Container>
     </footer>
   );

@@ -8,10 +8,15 @@ import {
   BurgerButton,
   ContactLink,
 } from './Header.styled';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +33,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <PageHeader scrolled={isScrolled.toString()}>
+    <PageHeader $scrolled={isScrolled.toString()}>
       <InnerContainer>
         <LogoWrapper>
           <svg width={31} height={18}>
@@ -39,7 +44,7 @@ const Header = () => {
             <use href={sprite + '#icon-GREENERGY-FOR-LIFE'}></use>
           </svg>
         </LogoWrapper>
-        <BurgerButton type="button">
+        <BurgerButton type="button" onClick={handleToggleMenu}>
           <svg width={18} height={18}>
             <use href={sprite + '#icon-menu'}></use>
           </svg>
@@ -57,6 +62,7 @@ const Header = () => {
           </svg>
         </ContactLink>
       </InnerContainer>
+      {isOpen && <BurgerMenu handleToggle={handleToggleMenu} />}
     </PageHeader>
   );
 };
