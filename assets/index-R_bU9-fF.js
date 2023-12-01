@@ -302,11 +302,9 @@ Error generating stack: `+o.message+`
   background: rgba(23, 61, 51, 0.25);
   backdrop-filter: blur(2px);
   z-index: 20;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 36px;
+  padding: 36px 20px;
 `,HE=I.div`
-  position: absolute;
+  height: 100%;
   width: 320px;
   padding: 24px 19px;
   border-radius: 25px;
@@ -318,12 +316,16 @@ Error generating stack: `+o.message+`
   display: flex;
   gap: 4px;
   margin-bottom: 8px;
+  padding: 0;
+  align-items: end;
   color: #fff;
   font-family: Fira Sans;
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.8px;
+  border: none;
+  background-color: transparent;
 `,UE=I.div`
   margin-bottom: 24px;
   height: 1px;
@@ -361,9 +363,8 @@ Error generating stack: `+o.message+`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `,QE=I.ul`
-  margin-top: 64px;
+  margin-top: auto;
   display: flex;
   gap: 8px;
   justify-content: flex-start;
