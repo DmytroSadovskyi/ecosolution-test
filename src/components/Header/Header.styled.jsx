@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
 export const PageHeader = styled.header`
-  min-height: 112px;
-  padding-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+
+  @media screen and (min-width: 1280px) {
+    padding: 24px 0;
+  }
+
   width: 100%;
   position: fixed;
   top: 0;
@@ -57,6 +64,11 @@ export const LogoWrapper = styled.div`
       color: #97d28b;
     }
   }
+`;
+
+export const NavWrapper = styled.div`
+  display: flex;
+  gap: 12px;
 `;
 
 export const BurgerButton = styled.button`

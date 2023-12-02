@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 import bg from '../../assets/images/mainBg/wind-turbine-clean-energy-mobile@1x.jpg';
 import { Link as ScrollLink } from 'react-scroll';
+
 export const MainSection = styled.section`
-  padding-top: 146px;
+  padding-top: 110px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 128px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-top: 176px;
+  }
 `;
 
 export const MainTitle = styled.h1`

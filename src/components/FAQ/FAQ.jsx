@@ -25,7 +25,9 @@ const FAQ = () => {
                 $opened={openIndex === index ? true : false}
               >
                 <svg>
-                  <use href={sprite + (openIndex === index ? '#icon-minus' : 'icon-plus')}></use>
+                  <use
+                    href={openIndex === index ? sprite + '#icon-minus' : sprite + '#icon-plus'}
+                  ></use>
                 </svg>
                 {item.question}
               </Question>

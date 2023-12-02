@@ -31,6 +31,7 @@ export const Item = styled.li`
 `;
 
 export const Question = styled.p`
+  padding-left: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
