@@ -8,10 +8,43 @@ export const Title = styled.h2`
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 398px;
+    margin: 0 auto;
+  }
+`;
+
+export const InnerContainer = styled.div`
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 24px;
+
+    & > :not(:nth-child(2)) {
+      grid-column: 2;
+    }
+    & > :nth-child(2) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+    & > :last-child {
+      align-self: end;
+    }
+  }
 `;
 
 export const List = styled.ul`
   margin-bottom: 36px;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const Item = styled.li`
@@ -20,13 +53,6 @@ export const Item = styled.li`
 
   &:not(:last-child) {
     margin-bottom: 16px;
-  }
-
-  overflow: hidden;
-  transition: max-height 0.7s ease;
-
-  &.open {
-    max-height: 200px;
   }
 `;
 
@@ -59,6 +85,12 @@ export const Answer = styled.p`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.56px;
+  text-align: justify;
+  padding-left: 24px;
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 `;
 
 export const MoreQuestion = styled.p`
@@ -70,6 +102,10 @@ export const MoreQuestion = styled.p`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.72px;
+`;
+
+export const QuestionWrapper = styled.div`
+  flex-grow: 1;
 `;
 
 export const ContactLink = styled(ScrolledLink).attrs(props => ({

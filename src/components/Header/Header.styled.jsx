@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const PageHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 36px 0;
 
   @media screen and (min-width: 1280px) {
@@ -21,7 +18,7 @@ export const PageHeader = styled.header`
 export const InnerContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   gap: 11px;
   margin: 0 auto;

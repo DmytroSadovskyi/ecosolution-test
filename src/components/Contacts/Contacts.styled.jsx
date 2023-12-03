@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const ContactsContainer = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
 export const Title = styled.h2`
   color: #173d33;
   font-size: 28px;
@@ -8,6 +15,13 @@ export const Title = styled.h2`
   text-transform: uppercase;
   margin-bottom: 24px;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 120px;
+  }
 `;
 
 export const ContactsList = styled.ul`
@@ -47,6 +61,11 @@ export const ContactLink = styled.a`
   line-height: normal;
   letter-spacing: -0.8px;
 
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+
   & svg {
     stroke: #173d33;
     transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,6 +79,12 @@ export const ContactLink = styled.a`
   }
 `;
 
+export const Text = styled.span`
+  @media screen and (max-width: 1279px) {
+    width: 212px;
+  }
+`;
+
 export const FirstPhone = styled(ContactLink)`
   margin-bottom: 12px;
 `;
@@ -69,6 +94,10 @@ export const SecondPhone = styled(ContactLink)``;
 export const SocialsWrapper = styled.div`
   display: flex;
   gap: 8px;
+
+  @media screen and (min-width: 1280px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const SocialLink = styled.a`
@@ -76,9 +105,22 @@ export const SocialLink = styled.a`
   & svg {
     stroke: #173d33;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0;
+  }
 `;
 
 export const FormWrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    width: 342px;
+    padding: 36px 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 596px;
+    padding: 40px;
+  }
   padding: 36px 12px;
   background-color: #eaedf1;
 `;

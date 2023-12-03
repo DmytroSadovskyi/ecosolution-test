@@ -24,6 +24,15 @@ export const MenuWrapper = styled.div`
   backdrop-filter: blur(12.5px);
   text-align: left;
   z-index: 30;
+
+  @media screen and (min-width: 768px) {
+    width: 320px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 365px;
+  }
 `;
 
 export const CloseButton = styled.button`

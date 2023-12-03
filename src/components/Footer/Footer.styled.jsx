@@ -1,16 +1,29 @@
 import styled from 'styled-components';
 import { LogoWrapper } from '../Header/Header.styled';
 import { Link as ScrollLink } from 'react-scroll';
+import { Divider } from '../Main/Main.styled';
 
+export const FooterDivider = styled(Divider)`
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+`;
 export const FooterLogoWrapper = styled(LogoWrapper)`
-  margin-right: 18px;
-  margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
 
 export const TopWrapper = styled.div`
-  display: flex;
+  /* display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: baseline;
+  } */
 `;
 
 export const BottomWrapper = styled.div`
@@ -25,14 +38,26 @@ export const BottomWrapper = styled.div`
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.64px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
 `;
 
 export const FooterSocials = styled.ul`
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 8px;
   margin-bottom: 24px;
   & svg {
     stroke: #173d33;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 `;
 

@@ -26,13 +26,7 @@ const Footer = () => {
               <use href={sprite + '#icon-GREENERGY-FOR-LIFE'}></use>
             </svg>
           </FooterLogoWrapper>
-          <LinkToMain to="main" smooth={true}>
-            <span>
-              <svg width={16} height={16}>
-                <use href={sprite + '#icon-arrow-up'}></use>
-              </svg>
-            </span>
-          </LinkToMain>
+
           <FooterSocials>
             <li>
               <a href="">
@@ -49,6 +43,13 @@ const Footer = () => {
               </a>
             </li>
           </FooterSocials>
+          <LinkToMain to="main" smooth={true}>
+            <span>
+              <svg width={16} height={16}>
+                <use href={sprite + '#icon-arrow-up'}></use>
+              </svg>
+            </span>
+          </LinkToMain>
         </TopWrapper>
         <BottomWrapper>
           <p>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</p>

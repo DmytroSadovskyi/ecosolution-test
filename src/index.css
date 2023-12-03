@@ -9,6 +9,19 @@
 body {
   font-family: 'Oswald', sans-serif;
   background-color: #f3f5fa;
+  padding-top: 110px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 128px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    padding-top: 176px;
+  }
 }
 
 h1,

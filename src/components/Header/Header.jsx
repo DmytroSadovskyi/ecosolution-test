@@ -9,7 +9,7 @@ import {
   BurgerButton,
   ContactLink,
 } from './Header.styled';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import BurgerMenu from '../BurgerMenu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

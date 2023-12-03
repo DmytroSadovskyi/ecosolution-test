@@ -1,29 +1,34 @@
 import React from 'react';
 import Container from '../Container';
 import sprite from '../../assets/sprite.svg';
+import image1 from '../../assets/images/wind-farms-fields.jpg';
+import image2 from '../../assets/images/man-worker-firld-by-solar-panels.jpg';
+
 import {
+  DescriptionWrapper,
   Title,
   Text,
   ValuesList,
   Value,
+  ImageItem,
   InnerWrapper,
   ValueTitle,
   ValueDescr,
-  StatTitle,
-  StatDescr,
 } from './Values.styled';
 
 const Values = () => {
   return (
     <section>
       <Container>
-        <Title>Main values of our company</Title>
-        <Text>
-          EcoSolution envisions a world where sustainable energy solutions power a brighter and
-          cleaner future for all. We aspire to be at the forefront of the global shift towards
-          renewable energy, leading the way in innovative technologies that harness the power of
-          nature to meet the world's energy needs.
-        </Text>
+        <DescriptionWrapper>
+          <Title>Main values of our company</Title>
+          <Text>
+            EcoSolution envisions a world where sustainable energy solutions power a brighter and
+            cleaner future for all. We aspire to be at the forefront of the global shift towards
+            renewable energy, leading the way in innovative technologies that harness the power of
+            nature to meet the world's energy needs.
+          </Text>
+        </DescriptionWrapper>
         <ValuesList>
           <Value>
             <InnerWrapper>
@@ -47,6 +52,12 @@ const Values = () => {
               future generations
             </ValueDescr>
           </Value>
+          <ImageItem>
+            <img src={image1} alt="" />
+          </ImageItem>
+          <ImageItem>
+            <img src={image2} alt="" />
+          </ImageItem>
           <Value>
             <InnerWrapper>
               <svg width={16} height={16}>
@@ -72,12 +83,6 @@ const Values = () => {
             </ValueDescr>
           </Value>
         </ValuesList>
-
-        <StatTitle>Electricity we produced for all time</StatTitle>
-
-        <StatDescr>
-          <span>1.134.147.814</span>kWh
-        </StatDescr>
       </Container>
     </section>
   );
