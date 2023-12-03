@@ -56,12 +56,24 @@ export const Item = styled.li`
   }
 `;
 
-export const Question = styled.p`
-  padding-left: 16px;
+export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  position: relative;
+
+  & svg {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+  }
+`;
+
+export const Question = styled.p`
   margin-bottom: ${props => (props.$opened ? '16px' : '0px')};
   color: #173d33;
   text-align: justify;
@@ -71,9 +83,11 @@ export const Question = styled.p`
   line-height: normal;
   letter-spacing: -0.72px;
 
-  & svg {
-    width: 16px;
-    height: 16px;
+  text-align: justify;
+  padding-left: 24px;
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 29px;
   }
 `;
 
@@ -104,9 +118,7 @@ export const MoreQuestion = styled.p`
   letter-spacing: -0.72px;
 `;
 
-export const QuestionWrapper = styled.div`
-  flex-grow: 1;
-`;
+export const QuestionWrapper = styled.div``;
 
 export const ContactLink = styled(ScrolledLink).attrs(props => ({
   hovered: undefined,

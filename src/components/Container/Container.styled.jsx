@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
-  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100%;
+  width: 480px;
   padding: 0 20px;
-  max-width: 480px;
+  margin: 0 auto;
 
   @media screen and (min-width: 768px) {
-    max-width: 768px;
+    width: 768px;
     padding: 0 30px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-    padding: 0 100px;
+    width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
   }
 `;

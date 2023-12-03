@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../Container';
 import sprite from '../../assets/sprite.svg';
+
 import {
   Answer,
   Item,
@@ -11,6 +12,7 @@ import {
   ContactLink,
   InnerContainer,
   QuestionWrapper,
+  Wrapper,
 } from './FAQ.styled';
 import { useState } from 'react';
 import data from '../../data.json';
@@ -31,17 +33,36 @@ const FAQ = () => {
           <List>
             {data.map((item, index) => (
               <Item key={index}>
-                <Question
-                  onClick={() => handleItemClick(index)}
-                  $opened={openIndex === index ? true : false}
-                >
-                  <svg>
-                    <use
-                      href={openIndex === index ? sprite + '#icon-minus' : sprite + '#icon-plus'}
-                    ></use>
-                  </svg>
-                  {item.question}
-                </Question>
+                <Wrapper>
+                  {openIndex === index ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                    >
+                      <path d="M7 14H21" stroke="#173D33" />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                    >
+                      <path d="M7 14H21" stroke="#97D28B" />
+                      <path d="M14 21V7" stroke="#97D28B" />
+                    </svg>
+                  )}
+                  <Question
+                    onClick={() => handleItemClick(index)}
+                    $opened={openIndex === index ? true : false}
+                  >
+                    {item.question}
+                  </Question>
+                </Wrapper>
                 {openIndex === index && <Answer>{item.answer}</Answer>}
               </Item>
             ))}
