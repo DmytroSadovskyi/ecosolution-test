@@ -31,7 +31,7 @@ export const Wrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
+    column-gap: 6px;
   }
   @media screen and (min-width: 1280px) {
     padding-bottom: 120px;
@@ -59,6 +59,9 @@ export const ControlsWrapper = styled.div`
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 12px;
+  @media screen and (min-width: 1280px) {
+    gap: 24px;
+  }
 `;
 
 export const BtnArrowNext = styled.button`
@@ -109,10 +112,11 @@ export const BtnArrowPrev = styled.button`
 
 export const Slide = styled.div`
   overflow: hidden;
-  max-width: 320px;
+  width: 320px;
   & img {
     height: 168px;
     object-fit: cover;
+    width: 100%;
   }
   @media screen and (min-width: 768px) {
     max-width: 342px;
@@ -196,6 +200,12 @@ export const NameWrapper = styled.div`
       transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
+`;
+
+export const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #97d28b;
 `;
 
 export const TypeWrapper = styled.div`

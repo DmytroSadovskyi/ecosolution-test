@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import {
   Backdrop,
   CloseButton,
@@ -18,10 +19,17 @@ const BurgerMenu = ({ handleToggle }) => {
     }
   };
 
+  const [activeLink, setActiveLink] = useState(null);
+
+  const handleLinkClick = link => {
+    handleToggle();
+    setActiveLink(link);
+  };
+
   return (
     <Backdrop onClick={handleBackdropClick}>
       <MenuWrapper>
-        <CloseButton onClick={handleToggle}>
+        <CloseButton onClick={handleToggle} aria-label="close-button">
           <svg width={20} height={20}>
             <use href={sprite + '#icon-iconamoon_close-light'}></use>
           </svg>
@@ -31,7 +39,17 @@ const BurgerMenu = ({ handleToggle }) => {
         <InnerWrapper>
           <Menu>
             <li>
-              <MenuLink to="main" smooth={true} onClick={handleToggle}>
+              <MenuLink
+                to="main"
+                smooth={true}
+                offset={-130}
+                onClick={() => {
+                  handleLinkClick('main');
+                }}
+                spy={true}
+                activeClass="active"
+                className={activeLink === 'main' ? 'active' : ''}
+              >
                 Main
                 <svg width={16} height={16}>
                   <use href={sprite + '#icon-arrow-right-45deg-small'}></use>
@@ -39,7 +57,17 @@ const BurgerMenu = ({ handleToggle }) => {
               </MenuLink>
             </li>
             <li>
-              <MenuLink to="values" smooth={true} onClick={handleToggle}>
+              <MenuLink
+                to="values"
+                smooth={true}
+                offset={-130}
+                onClick={() => {
+                  handleLinkClick('values');
+                }}
+                spy={true}
+                activeClass="active"
+                className={activeLink === 'values' ? 'active' : ''}
+              >
                 About
                 <svg width={16} height={16}>
                   <use href={sprite + '#icon-arrow-right-45deg-small'}></use>
@@ -47,7 +75,17 @@ const BurgerMenu = ({ handleToggle }) => {
               </MenuLink>
             </li>
             <li>
-              <MenuLink to="cases" smooth={true} onClick={handleToggle}>
+              <MenuLink
+                to="cases"
+                smooth={true}
+                offset={-130}
+                onClick={() => {
+                  handleLinkClick('cases');
+                }}
+                spy={true}
+                activeClass="active"
+                className={activeLink === 'cases' ? 'active' : ''}
+              >
                 Cases
                 <svg width={16} height={16}>
                   <use href={sprite + '#icon-arrow-right-45deg-small'}></use>
@@ -55,7 +93,17 @@ const BurgerMenu = ({ handleToggle }) => {
               </MenuLink>
             </li>
             <li>
-              <MenuLink to="faq" smooth={true} onClick={handleToggle}>
+              <MenuLink
+                to="faq"
+                smooth={true}
+                offset={-130}
+                onClick={() => {
+                  handleLinkClick('faq');
+                }}
+                spy={true}
+                activeClass="active"
+                className={activeLink === 'faq' ? 'active' : ''}
+              >
                 FAQ
                 <svg width={16} height={16}>
                   <use href={sprite + '#icon-arrow-right-45deg-small'}></use>
@@ -63,7 +111,17 @@ const BurgerMenu = ({ handleToggle }) => {
               </MenuLink>
             </li>
             <li>
-              <MenuLink to="contacts" smooth={true} onClick={handleToggle}>
+              <MenuLink
+                to="contacts"
+                smooth={true}
+                offset={-130}
+                onClick={() => {
+                  handleLinkClick('contacts');
+                }}
+                spy={true}
+                activeClass="active"
+                className={activeLink === 'contacts' ? 'active' : ''}
+              >
                 Contact Us
                 <svg width={16} height={16}>
                   <use href={sprite + '#icon-arrow-right-45deg-small'}></use>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as ScrollLink } from 'react-scroll';
 
 export const PageHeader = styled.header`
   padding: 36px 0;
@@ -69,6 +70,7 @@ export const NavWrapper = styled.div`
 `;
 
 export const BurgerButton = styled.button`
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,9 +87,7 @@ export const BurgerButton = styled.button`
   }
 `;
 
-export const ContactLink = styled.a.attrs(props => ({
-  hovered: undefined,
-}))`
+export const ContactLink = styled(ScrollLink)`
   display: none;
   @media screen and (min-width: 768px) {
     display: inline-flex;

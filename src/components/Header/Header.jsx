@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import EllipseIcon from '../../assets/icons/arrow-down.svg?react';
 
 import sprite from '../../assets/sprite.svg';
 import {
@@ -13,7 +14,6 @@ import BurgerMenu from '../BurgerMenu';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleMenu = () => {
     setIsOpen(prev => !prev);
@@ -34,7 +34,7 @@ const Header = () => {
     };
   }, []);
   return (
-    <PageHeader $scrolled={isScrolled.toString()}>
+    <PageHeader $scrolled={isScrolled.toString()} id="header">
       <InnerContainer>
         <LogoWrapper>
           <svg width={31} height={18}>
@@ -51,17 +51,9 @@ const Header = () => {
               <use href={sprite + '#icon-menu'}></use>
             </svg>
           </BurgerButton>
-          <ContactLink
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onFocus={() => setIsHovered(true)}
-            onBlur={() => setIsHovered(false)}
-            hovered={isHovered}
-          >
+          <ContactLink to="contacts" smooth={true}>
             Get in touch
-            <svg width={14} height={14}>
-              <use href={isHovered ? sprite + '#icon-arrow-down' : sprite + '#icon-ellipse'}></use>
-            </svg>
+            <EllipseIcon />
           </ContactLink>
         </NavWrapper>
       </InnerContainer>

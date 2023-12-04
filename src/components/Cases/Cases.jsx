@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../Container';
-import MySlider from '../Slider/Slider';
+import MySlider from '../Slider';
 import { CasesSection } from './Cases.styled';
 
 const Cases = () => {

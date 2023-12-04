@@ -77,7 +77,7 @@ export const MenuLink = styled(MobileLink)`
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.25);
   font-family: Fira Sans;
   font-size: 24px;
   font-weight: 400;
@@ -87,12 +87,20 @@ export const MenuLink = styled(MobileLink)`
   cursor: pointer;
 
   & svg {
-    stroke: #fff;
+    stroke: rgba(255, 255, 255, 0.25);
     transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover,
   &:focus {
+    color: #ffffff;
+
+    svg {
+      stroke: #ffffff;
+    }
+  }
+
+  &.active {
     color: #97d28b;
 
     svg {

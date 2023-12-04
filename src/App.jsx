@@ -19,6 +19,7 @@ const App = () => {
         <FAQ />
         <Contacts />
       </main>
+
       <Footer />
     </>
   );

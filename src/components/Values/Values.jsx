@@ -18,7 +18,7 @@ import {
 
 const Values = () => {
   return (
-    <section>
+    <section id="values">
       <Container>
         <DescriptionWrapper>
           <Title>Main values of our company</Title>

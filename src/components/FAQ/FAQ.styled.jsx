@@ -15,6 +15,7 @@ export const Title = styled.h2`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 48px;
     max-width: 398px;
     margin: 0 auto;
   }
@@ -57,19 +58,29 @@ export const Item = styled.li`
 `;
 
 export const Wrapper = styled.div`
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
-  position: relative;
 
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 24px;
+  }
+`;
+
+export const IconWrapper = styled.div`
   & svg {
     width: 16px;
     height: 16px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 4px;
+
+    @media screen and (min-width: 768px) {
+      width: 28px;
+      height: 28px;
+    }
   }
 `;
 
@@ -84,7 +95,7 @@ export const Question = styled.p`
   letter-spacing: -0.72px;
 
   text-align: justify;
-  padding-left: 24px;
+
   @media screen and (min-width: 1280px) {
     font-size: 24px;
     line-height: 29px;
@@ -92,6 +103,7 @@ export const Question = styled.p`
 `;
 
 export const Answer = styled.p`
+  padding-left: 24px;
   color: #173d33;
   text-align: justify;
   font-family: 'Fira Sans', sans-serif;
@@ -100,10 +112,9 @@ export const Answer = styled.p`
   line-height: normal;
   letter-spacing: -0.56px;
   text-align: justify;
-  padding-left: 24px;
-  @media screen and (min-width: 1280px) {
-    font-size: 16px;
-    line-height: 19px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 52px;
   }
 `;
 

@@ -21,6 +21,7 @@ import {
   DescrWrapper,
   ButtonsWrapper,
   ControlsWrapper,
+  Divider,
 } from './Slider.styled';
 
 const MySlider = () => {
@@ -106,6 +107,7 @@ const MySlider = () => {
                 </svg>
               </a>
             </NameWrapper>
+            <Divider />
             <TypeWrapper>
               <p>Wind Power for auto field irrigation</p>
               <p>July 2023</p>
@@ -124,6 +126,7 @@ const MySlider = () => {
                 </svg>
               </a>
             </NameWrapper>
+            <Divider />
             <TypeWrapper>
               <p>Solar Panels for industrial use</p>
               <p>November 2023</p>
@@ -142,6 +145,7 @@ const MySlider = () => {
                 </svg>
               </a>
             </NameWrapper>
+            <Divider />
             <TypeWrapper>
               <p>Thermal modules</p>
               <p>October 2023</p>
@@ -160,6 +164,7 @@ const MySlider = () => {
                 </svg>
               </a>
             </NameWrapper>
+            <Divider />
             <TypeWrapper>
               <p>Wind power</p>
               <p>September 2021</p>
@@ -178,6 +183,7 @@ const MySlider = () => {
                 </svg>
               </a>
             </NameWrapper>
+            <Divider />
             <TypeWrapper>
               <p>Mini nuclear stations</p>
               <p>May 2021</p>

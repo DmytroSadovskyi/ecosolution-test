@@ -60,11 +60,6 @@ address {
   font-style: normal;
 }
 
-footer {
-  padding-top: 36px;
-  padding-bottom: 24px;
-}
-
 @media screen and (min-width: 768px) {
   section {
     padding-top: 100px;
@@ -74,19 +69,5 @@ footer {
 @media screen and (min-width: 1280px) {
   section {
     padding-top: 120px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  footer {
-    padding-top: 100px;
-    padding-bottom: 40px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  footer {
-    padding-top: 120px;
-    padding-bottom: 40px;
   }
 }

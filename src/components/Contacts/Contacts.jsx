@@ -22,6 +22,7 @@ import {
   TextArea,
   FormButton,
   ContactsContainer,
+  Divider,
 } from './Contacts.styled';
 
 const Contacts = () => {
@@ -55,13 +56,13 @@ const Contacts = () => {
             <ContactsList>
               <li>
                 <ContactType>Phone:</ContactType>
-                <FirstPhone href="">
+                <FirstPhone href="tel:+380981234567">
                   <svg width={24} height={24}>
                     <use href={sprite + '#icon-call'}></use>
                   </svg>
                   38 (098) 12 34 567
                 </FirstPhone>
-                <SecondPhone href="">
+                <SecondPhone href="tel:+380931234567">
                   <svg width={24} height={24}>
                     <use href={sprite + '#icon-call'}></use>
                   </svg>
@@ -70,7 +71,7 @@ const Contacts = () => {
               </li>
               <li>
                 <ContactType>E-mail:</ContactType>
-                <ContactLink href="">
+                <ContactLink href="mailto:office@ecosolution.com">
                   <svg width={24} height={24}>
                     <use href={sprite + '#icon-sms'}></use>
                   </svg>
@@ -79,7 +80,11 @@ const Contacts = () => {
               </li>
               <li>
                 <ContactType>Address:</ContactType>
-                <ContactLink href="">
+                <ContactLink
+                  href="https://maps.app.goo.gl/AyT3DNC4Cco23Xoy7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg width={24} height={24}>
                     <use href={sprite + '#icon-map'}></use>
                   </svg>
@@ -89,12 +94,12 @@ const Contacts = () => {
               <li>
                 <ContactType>Social Networks:</ContactType>
                 <SocialsWrapper>
-                  <SocialLink href="">
+                  <SocialLink href="#" aria-label="facebook">
                     <svg width={24} height={24}>
                       <use href={sprite + '#icon-facebook'}></use>
                     </svg>
                   </SocialLink>
-                  <SocialLink href="">
+                  <SocialLink href="#" aria-label="instagram">
                     <svg width={24} height={24}>
                       <use href={sprite + '#icon-instagram'}></use>
                     </svg>
@@ -176,6 +181,7 @@ const Contacts = () => {
             </ContactForm>
           </FormWrapper>
         </ContactsContainer>
+        <Divider />
       </Container>
     </section>
   );

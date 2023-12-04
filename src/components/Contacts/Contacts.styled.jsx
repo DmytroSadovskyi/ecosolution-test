@@ -17,10 +17,12 @@ export const Title = styled.h2`
   text-align: center;
   @media screen and (min-width: 768px) {
     margin-bottom: 40px;
+    font-size: 36px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 120px;
+    font-size: 48px;
   }
 `;
 
@@ -104,6 +106,15 @@ export const SocialLink = styled.a`
   padding: 12px;
   & svg {
     stroke: #173d33;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      stroke: #97d28b;
+      fill: #97d28b;
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -241,5 +252,21 @@ export const FormButton = styled.button`
 
   & svg {
     stroke: #173d33;
+  }
+`;
+
+export const Divider = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #97d28b;
+
+  margin-top: 36px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 120px;
   }
 `;
