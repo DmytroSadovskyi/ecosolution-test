@@ -17,6 +17,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleMenu = () => {
     setIsOpen(prev => !prev);
+    const body = document.body;
+    body.classList.toggle('menu-open');
   };
 
   useEffect(() => {
