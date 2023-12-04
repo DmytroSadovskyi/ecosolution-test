@@ -35,14 +35,9 @@ const FAQ = () => {
           <List>
             {data.map((item, index) => (
               <Item key={index}>
-                <Wrapper>
+                <Wrapper onClick={() => handleItemClick(index)}>
                   <IconWrapper>{openIndex === index ? <IconMinus /> : <IconPlus />}</IconWrapper>
-                  <Question
-                    onClick={() => handleItemClick(index)}
-                    $opened={openIndex === index ? true : false}
-                  >
-                    {item.question}
-                  </Question>
+                  <Question $opened={openIndex === index ? true : false}>{item.question}</Question>
                 </Wrapper>
                 {openIndex === index && <Answer>{item.answer}</Answer>}
               </Item>
